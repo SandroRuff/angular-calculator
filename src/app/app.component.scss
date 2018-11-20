@@ -1,5 +1,8 @@
 @import './shares/stylings/variables';
 
-* {
+.wrapper {
+  display: flex;
+  justify-content: center;
   font-family: $main-font;
+  padding: 5rem 0;
 }

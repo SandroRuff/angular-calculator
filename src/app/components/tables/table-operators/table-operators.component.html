@@ -1,8 +1,7 @@
 <div class="wrapper">
-  <select *ngFor="let cell of cells">
-    <option selected>{{ operators[0] }}</option>
-    <option>{{ operators[1] }}</option>
-    <option>{{ operators[2] }}</option>
-    <option>{{ operators[3] }}</option>
+  <select *ngFor="let cell of cells; let i = index" (change)="itemSelected($event.target.value, i)" [value]="cell">
+    <option *ngFor="let operator of operators">{{
+      operator }}</option>
   </select>
+  <app-add-button (click)="btnClick()"></app-add-button>
 </div>

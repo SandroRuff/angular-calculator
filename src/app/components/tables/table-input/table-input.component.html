@@ -1,3 +1,4 @@
 <div class="wrapper">
-  <input type="number" *ngFor="let cell of cells" value="{{ cell }}">
+  <input type="number" *ngFor="let cell of cells; let i = index" value="{{ cell }}" #box (keyup)="onKeyUp(box.value, i, inputNumber)">
+  <app-add-button (click)="btnClick()"></app-add-button>
 </div>

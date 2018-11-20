@@ -1,8 +1,11 @@
 <link href="https://fonts.googleapis.com/css?family=KoHo:400,500" rel="stylesheet">
 
 <div class="wrapper">
-  <app-table-input [cells]="cells.input1"></app-table-input>
-  <app-table-operators [cells]="cells.operators"></app-table-operators>
-  <app-table-input [cells]="cells.input2"></app-table-input>
-  <app-table-result [cells]="cells.result"></app-table-result>
+  <app-table-input [cells]="cells.input1" [inputNumber]="1" (changeValues)="changeValues($event)" (buttonClick)="buttonClick($event)">
+  </app-table-input>
+  <app-table-operators [cells]="cells.operators" (changeOperator)="changeOperator($event)" (buttonClick)="buttonClick($event)">
+  </app-table-operators>
+  <app-table-input [cells]="cells.input2" [inputNumber]="2" (changeValues)="changeValues($event)" (buttonClick)="buttonClick($event)">
+  </app-table-input>
+  <app-table-result [cells]="cells.result" (buttonClick)="buttonClick($event)"></app-table-result>
 </div>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-table-result',
@@ -6,5 +6,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./table-result.component.scss']
 })
 export class TableResultComponent {
+  @Output() buttonClick = new EventEmitter<any>();
   @Input() cells: number[];
+
+  btnClick() {
+    this.buttonClick.emit(['result']);
+  }
 }
