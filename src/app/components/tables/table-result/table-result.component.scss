@@ -1,0 +1,14 @@
+@import '../../../shares/stylings/variables';
+
+.wrapper {
+  font-size: 1.5em;
+  color: $main-color;
+
+  div {
+    width: 15vw;
+    height: 10vh;
+    padding: 0.5em;
+    display: inline-block;
+    border: 0.125em solid $main-color;
+  }
+}
